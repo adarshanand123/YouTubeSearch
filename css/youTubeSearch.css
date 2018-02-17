@@ -1,0 +1,90 @@
+body{
+	background-color: gray;
+}
+input {
+	outline: none;
+}
+
+#container{
+	width : 60vw;
+	margin: 0px auto;
+	border: solid;
+	border-radius: 5px;
+}
+
+header {
+	padding:20px;
+	background-color: #00FFFF;
+	font-family: cursive;
+}
+
+#vidz {
+	color: red;
+}
+
+section{
+	padding: 30px;
+	background-color: white;
+}
+
+#inputContainer{
+	border-radius: 10px;
+	display: inline-block;
+	border: solid 1px;
+	padding: 10px;
+}
+
+#formSearch {
+	padding: 10px;
+	border: none;
+	margin: 0px 7px;
+	width: 20vw;
+	transition: width 1s;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+#formSearch::placeholder{
+	color: red;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#formSearch:focus {
+	width:50vw;
+}
+
+#formSubmit{
+	width : 2vw;
+	position: relative;
+	top: 3px;
+	right: 10px;
+}
+
+#resultsContainer{
+	background-color: white;
+	width: 95%;
+	border-radius: 2px;
+	overflow: auto;
+}
+
+.singleResult{
+	width: 95%;
+	margin: auto;
+	border-bottom: dashed 1px;
+	margin:10px;
+}
+
+.singleResult > img {
+	float: left;
+    margin: 0px 20px 0px 0px;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+footer{
+	padding: 10px;
+	background-color: #00FFFF;
+}

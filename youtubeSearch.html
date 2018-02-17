@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>SearchVidz</title>
+	<script src = "js/doT.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/youTubeSearch.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+	<script src="js/jquery.fancybox.pack.js"></script>
+	<script id = "searchResult" type="text/x-dot-template">
+	{{~it.array :value:index}}
+		<div class="singleResult">
+			<img src ={{=value.thumbnail}}>
+			<p class ="bold"><a class = "fancybox fancybox.iframe" href="https://www.youtube.com/embed/{{=value.videoId}}">{{=value.title}}</a></p>
+			<p><span class="bold">By</span> {{=value.channelTitle}} <span class = "bold">on</span> {{=value.publishedAt}}</p>	
+			<p><span class="bold">Description: </span>{{=value.description}}</p>		
+		</div>
+	{{~}}
+	</script>
+	<script	src="js/youTubeSearch.js"></script>
+</head>
+<body>
+<div id = 'container'>
+	<header>
+		<h1><span id = "search">Search</span><span id = "vidz">Vidz</span></h1>
+		<h4>Show all the videos from a Youtube Channel</h4>
+	</header>
+	<section>	
+		<form id = "form">
+			<div id = "inputContainer" tabindex="0">
+				<input id = "formSearch" type ="search" name = "youTubeSearch" placeholder = "Search YouTube...">
+				<input id = "formSubmit" type = "image" src="img/search-icon.png"  >
+			</div>
+		</form>
+		<div id = "resultsContainer">
+		</div>
+	</section>
+	<footer>
+		<p>Copyright 2014.All Rights Reserved</p>
+	</footer>
+</div>
+</body>
+</html>
